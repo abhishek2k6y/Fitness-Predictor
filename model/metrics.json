@@ -1,0 +1,152 @@
+{
+  "name": "Fitness Predictor",
+  "n": 28,
+  "validation": "leave-one-out",
+  "features": [
+    "Age",
+    "Sex_Male",
+    "Height_cm",
+    "Weight_kg",
+    "BMI",
+    "Waist_Circumference_cm",
+    "Resting_Heart_Rate_bpm",
+    "Systolic_BP_mmHg",
+    "Diastolic_BP_mmHg",
+    "Physical_Activity_Score",
+    "Sleep_Duration_hours"
+  ],
+  "age_range": [
+    41,
+    54
+  ],
+  "targets": {
+    "mwt": {
+      "column": "6MWT_Distance_m",
+      "best": "Gradient boosting",
+      "baseline": {
+        "model": "Mean baseline",
+        "r2": -0.075,
+        "mae": 50.18,
+        "rmse": 64.63
+      },
+      "mae_gain_pct": 38,
+      "results": [
+        {
+          "model": "Ridge (tuned)",
+          "r2": 0.463,
+          "mae": 35.38,
+          "rmse": 45.67
+        },
+        {
+          "model": "Lasso (tuned)",
+          "r2": 0.267,
+          "mae": 41.76,
+          "rmse": 53.37
+        },
+        {
+          "model": "Polynomial ridge",
+          "r2": -0.167,
+          "mae": 53.94,
+          "rmse": 67.33
+        },
+        {
+          "model": "Random forest",
+          "r2": 0.286,
+          "mae": 40.82,
+          "rmse": 52.67
+        },
+        {
+          "model": "Gradient boosting",
+          "r2": 0.574,
+          "mae": 31.15,
+          "rmse": 40.66
+        },
+        {
+          "model": "LightGBM",
+          "r2": -0.075,
+          "mae": 50.18,
+          "rmse": 64.63
+        },
+        {
+          "model": "Stacking ensemble",
+          "r2": 0.509,
+          "mae": 33.74,
+          "rmse": 43.66
+        }
+      ],
+      "dist": {
+        "p1": 448.5,
+        "p10": 519.2,
+        "p25": 562.8,
+        "p50": 595.0,
+        "p75": 646.4,
+        "p90": 665.8,
+        "p99": 705.1
+      }
+    },
+    "vo2": {
+      "column": "VO2_Max_ml_kg_min",
+      "best": "Ridge (tuned)",
+      "baseline": {
+        "model": "Mean baseline",
+        "r2": -0.075,
+        "mae": 4.09,
+        "rmse": 5.19
+      },
+      "mae_gain_pct": 16,
+      "results": [
+        {
+          "model": "Ridge (tuned)",
+          "r2": 0.402,
+          "mae": 3.42,
+          "rmse": 3.87
+        },
+        {
+          "model": "Lasso (tuned)",
+          "r2": 0.194,
+          "mae": 3.75,
+          "rmse": 4.49
+        },
+        {
+          "model": "Polynomial ridge",
+          "r2": -0.083,
+          "mae": 4.49,
+          "rmse": 5.21
+        },
+        {
+          "model": "Random forest",
+          "r2": 0.205,
+          "mae": 3.72,
+          "rmse": 4.46
+        },
+        {
+          "model": "Gradient boosting",
+          "r2": 0.18,
+          "mae": 3.94,
+          "rmse": 4.53
+        },
+        {
+          "model": "LightGBM",
+          "r2": -0.075,
+          "mae": 4.09,
+          "rmse": 5.19
+        },
+        {
+          "model": "Stacking ensemble",
+          "r2": -0.117,
+          "mae": 4.51,
+          "rmse": 5.29
+        }
+      ],
+      "dist": {
+        "p1": 42.5,
+        "p10": 43.7,
+        "p25": 47.1,
+        "p50": 51.0,
+        "p75": 53.6,
+        "p90": 57.2,
+        "p99": 61.6
+      }
+    }
+  }
+}
