@@ -134,7 +134,7 @@ Invalid input returns HTTP `422` with an `errors` object keyed by field.
 | `sex` | `"Male"` or `"Female"` | n/a |
 | `height` | cm | 120 to 220 |
 | `weight` | kg | 30 to 250 |
-| `waist` | Waist circumference, cm | 40 to 200 |
+| `waist` | Waist circumference, cm | 20 to 200 |
 | `rhr` | Resting heart rate, bpm | 35 to 140 |
 | `sbp` / `dbp` | Systolic / diastolic blood pressure, mmHg | 80 to 220 / 40 to 140 |
 | `activity` | Physical activity score | 0 to 10 |
