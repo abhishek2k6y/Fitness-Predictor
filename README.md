@@ -57,8 +57,8 @@ LOOCV is used instead of a fixed hold-out set because, with a few dozen records,
 Requires Python 3.9 or newer. Node.js is **not** needed to run the app, because the built frontend is already in `static/`.
 
 ```bash
-git clone https://github.com/<your-username>/fitness-estimator.git
-cd fitness-estimator
+git clone https://github.com/<your-username>/fitness-predictor.git
+cd fitness-predictor
 
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
@@ -145,7 +145,7 @@ Invalid input returns HTTP `422` with an `errors` object keyed by field.
 ## Project structure
 
 ```
-fitness-estimator/
+fitness-predictor/
 ├── app.py                 Flask API and static file server
 ├── train.py               Model comparison, LOOCV validation, final fit
 ├── requirements.txt
